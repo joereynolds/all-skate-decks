@@ -10,7 +10,11 @@ services:
     volumes:
       - .:/var/www/html
   node:
-    image: node:18
+    build:
+      context: ./infrastructure/docker/node/
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
   database:
     image: mysql:8
     environment:
