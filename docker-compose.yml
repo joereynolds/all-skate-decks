@@ -19,4 +19,4 @@ services:
     image: mysql:8
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: all-skate-decks
+      MYSQL_DATABASE: all_skate_decks
