@@ -8,7 +8,8 @@
         @livewireStyles
         @livewireScripts
     </head>
-    <body>
+    <body class="p-5 flex">
+        <livewire:sidebar :brands="$brands"/>
         <livewire:deck-listing/>
     </body>
 </html>

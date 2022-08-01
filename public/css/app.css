@@ -508,11 +508,17 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .inline-block {
   display: inline-block;
 }
 .flex {
   display: flex;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .border {
   border-width: 1px;
@@ -523,15 +529,7 @@ video {
 .p-2 {
   padding: 0.5rem;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
 .font-bold {
   font-weight: 700;
-}
-
-h1 {
-    color: blue;
 }
 
