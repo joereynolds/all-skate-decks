@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->foreignId('brand_id')->constrained();
-            $table->foreignId('deck_variations_id')->constrained();
             $table->timestamps();
         });
     }
