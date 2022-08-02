@@ -517,6 +517,24 @@ video {
 .flex {
   display: flex;
 }
+.h-1 {
+  height: 0.25rem;
+}
+.h-16 {
+  height: 4rem;
+}
+.h-96 {
+  height: 24rem;
+}
+.w-1 {
+  width: 0.25rem;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-96 {
+  width: 24rem;
+}
 .cursor-pointer {
   cursor: pointer;
 }

@@ -1,5 +1,10 @@
+<div>
     <div>
-        <img src="https://media.titus.de/media/image/22/b3/bd/enjoi-skateboard-decks-whitey-panda-logo-wide-r7-white-vorderansicht-0115843_600x600.jpg">
+        @if (!empty($imageUrl))
+            <img src="{{ $imageUrl }}" class="max-w-96">
+        @else
+            <img src="{{ $deck->variations->first()->image_url }}" class="max-w-96">
+        @endif
     </div>
 
     <div>
@@ -12,12 +17,12 @@
         <div>
             Variations: 
             @foreach ($deck->variations as $variation)
-                <a 
-                    href="#" 
+                <button 
+                    wire:click="$set('imageUrl', '{{ $variation->image_url }}')"
                     class="inline-block border p-2"
                 >
                     {{ $variation->name }}
-                </a> 
+                </button> 
             @endforeach
         </div>
     </div>
