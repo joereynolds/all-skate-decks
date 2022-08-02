@@ -10,6 +10,6 @@
     </head>
     <body class="p-5 flex">
         <livewire:sidebar :brands="$brands"/>
-        <livewire:deck-listing/>
+        <livewire:deck-listing :decks="$decks"/>
     </body>
 </html>

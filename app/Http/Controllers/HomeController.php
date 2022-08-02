@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brands;
+use App\Models\Deck;
 use Illuminate\Contracts\View\View;
 
 class HomeController extends Controller
@@ -12,7 +13,8 @@ class HomeController extends Controller
         return view(
             'welcome',
             [
-                'brands' => Brands::all()
+                'brands' => Brands::all(),
+                'decks' => Deck::all()
             ]
         );
     }
