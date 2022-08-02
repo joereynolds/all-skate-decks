@@ -2,14 +2,33 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Collection;
+use App\Models\Brands;
+use App\Models\Deck;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 class DeckListing extends Component
 {
-    public Collection $decks;
-    public function render()
+    public $brands;
+
+    public function render(Request $request)
     {
-        return view('livewire.deck-listing');
+        $brands = $request->query('brands');
+
+        if ($brands) {
+            $brandId = Brands::where('name', $brands)->first()->id;
+            $decks = Deck::where('brand_id', $brandId)->get();
+        }
+
+        if (!$brands) {
+            $decks = Deck::all();
+        }
+
+        return view(
+            'livewire.deck-listing',
+            [
+                'decks' => $decks
+            ]
+        );
     }
 }

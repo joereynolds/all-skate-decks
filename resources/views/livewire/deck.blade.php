@@ -9,7 +9,7 @@
 
     <div>
         <p>
-            Brand: <a href="#">{{ $deck->brand->name }}</a>
+            Brand: <a href="">{{ $deck->brand->name }}</a>
         </p>
         <p>
             {{ $deck->description }}

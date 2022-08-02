@@ -14,7 +14,6 @@ class HomeController extends Controller
             'welcome',
             [
                 'brands' => Brands::all(),
-                'decks' => Deck::all()
             ]
         );
     }
