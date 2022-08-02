@@ -11,9 +11,16 @@ class DecksSeeder extends Seeder
     {
         DB::table('decks')->insert(
             [
-                'name' => 'Enjoi Panda Logo',
-                'brand_id' => 6,
-                'description' => 'Some decsription here'
+                [
+                    'name' => 'Alien Workshop Believe',
+                    'brand_id' => 1,
+                    'description' => 'Some description here'
+                ],
+                [
+                    'name' => 'Enjoi Panda Logo',
+                    'brand_id' => 6,
+                    'description' => 'Some description here'
+                ]  ,
             ]
         );
     }

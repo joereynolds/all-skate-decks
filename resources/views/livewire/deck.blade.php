@@ -1,4 +1,4 @@
-<div>
+<div class="border p-5">
     <div>
         @if (!empty($imageUrl))
             <img src="{{ $imageUrl }}" class="max-w-96">

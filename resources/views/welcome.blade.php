@@ -8,8 +8,13 @@
         @livewireStyles
         @livewireScripts
     </head>
-    <body class="p-5 flex">
-        <livewire:sidebar :brands="$brands"/>
-        <livewire:deck-listing :decks="$decks"/>
+    <body class="p-5">
+        <livewire:search/>
+
+        <main class="mt-5 flex">
+            <livewire:sidebar :brands="$brands"/>
+            <livewire:deck-listing :decks="$decks"/>
+        </main>
+
     </body>
 </html>

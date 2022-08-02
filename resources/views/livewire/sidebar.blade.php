@@ -1,8 +1,34 @@
 <aside class="border p-5">
-    <h2 class="font-bold">Brands</h2>
-    @foreach ($brands as $brand)
+    <section class="mb-10">
+        <h2 class="font-bold">Brands</h2>
+
+        @foreach ($brands as $brand)
+            <div class="border p-2 mb-2 cursor-pointer">
+                {{ $brand->name }}
+            </div>
+        @endforeach
+    </section>
+
+    <section class="mb-10">
+        <h2 class="font-bold">Pros</h2>
+
         <div class="border p-2 mb-2 cursor-pointer">
-            {{ $brand->name }}
+            Chris Haslam
         </div>
-    @endforeach
+        <div class="border p-2 mb-2 cursor-pointer">
+            Corey Duffel
+        </div>
+    </section>
+
+    <section>
+        <h2 class="font-bold">Artists</h2>
+
+        <div class="border p-2 mb-2 cursor-pointer">
+            Artist #1
+        </div>
+        <div class="border p-2 mb-2 cursor-pointer">
+            Artist #2
+        </div>
+    </section>
+
 </aside>
