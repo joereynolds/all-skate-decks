@@ -526,6 +526,9 @@ video {
 .flex {
   display: flex;
 }
+.w-full {
+  width: 100%;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -540,6 +543,9 @@ video {
 }
 .p-3 {
   padding: 0.75rem;
+}
+.text-left {
+  text-align: left;
 }
 .font-bold {
   font-weight: 700;
