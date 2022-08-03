@@ -12,7 +12,7 @@
         <livewire:search/>
 
         <main class="mt-5 flex">
-            <livewire:sidebar :brands="$brands"/>
+            <livewire:sidebar/>
             <livewire:deck-listing/>
         </main>
 

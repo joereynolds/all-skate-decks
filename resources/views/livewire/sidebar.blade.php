@@ -3,7 +3,9 @@
         <h2 class="font-bold">Brands</h2>
 
         @foreach ($brands as $brand)
-            <a class="block border p-2 mb-2" href="{{ route('home', ['brands' => $brand->name]) }}">
+            <a  
+                class="block border p-2 mb-2 hover:border-emerald-300" 
+                href="{{ route('home', ['brands' => $brand->name]) }}">
                 {{ $brand->name }}
             </a>
         @endforeach

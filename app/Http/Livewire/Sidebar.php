@@ -2,14 +2,18 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Collection;
+use App\Models\Brands;
 use Livewire\Component;
 
 class Sidebar extends Component
 {
-    public Collection $brands;
+    public function mount()
+    {
+        $this->brands = Brands::all();
+    }
+
     public function render()
     {
-        return view('livewire.sidebar');
+        return view('livewire.sidebar', ['brands' => $this->brands]);
     }
 }
