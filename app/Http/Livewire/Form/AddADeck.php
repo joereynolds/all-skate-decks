@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class AddADeck extends Component
 {
+    public $name;
+
     public function mount()
     {
         $this->brands = Brand::all();
