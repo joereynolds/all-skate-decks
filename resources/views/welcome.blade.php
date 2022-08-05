@@ -16,6 +16,7 @@
         <main class="mt-5 flex">
             <livewire:sidebar/>
             <livewire:deck-listing/>
+            <livewire:form.add-a-deck/>
         </main>
 
     </body>
