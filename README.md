@@ -13,8 +13,17 @@ Because I want to try and find my old boards and didn't see a website like this 
 
 ## Development
 
-Everything uses docker. Run `./run.sh` and populate an `.env` file with valid
-DB credentials and you should be good to go.
+Everything uses docker. Run `./run.sh` and populate an `.env` file with these
+DB credentials and you should be good to go:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=database
+DB_PORT=3306
+DB_DATABASE=all_skate_decks
+DB_USERNAME=root
+DB_PASSWORD=password
+```
 
 ### Technologies used
 
