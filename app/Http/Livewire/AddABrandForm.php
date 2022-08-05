@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Brands;
+use App\Models\Brand;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
@@ -18,9 +18,11 @@ class AddABrandForm extends Component
     {
         $this->validate();
 
-        $submittedBrand = new Brands();
+        $submittedBrand = new Brand();
         $submittedBrand->name = $this->brand;
         $submittedBrand->save();
+
+        session()->flash('message', "Brand '$this->brand' saved successfully.");
     }
 
     public function render(): View

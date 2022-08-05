@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Brands;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use Livewire\Component;
 
@@ -14,7 +14,7 @@ class Sidebar extends Component
 
     public function mount()
     {
-        $this->brands = Brands::all();
+        $this->brands = Brand::all();
     }
 
     public function render()

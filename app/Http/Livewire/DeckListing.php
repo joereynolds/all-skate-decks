@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Brands;
+use App\Models\Brand;
 use App\Models\Deck;
 use Illuminate\Http\Request;
 use Livewire\Component;
@@ -16,7 +16,7 @@ class DeckListing extends Component
         $brands = $request->query('brands');
 
         if ($brands) {
-            $brandId = Brands::where('name', $brands)->first()->id;
+            $brandId = Brand::where('name', $brands)->first()->id;
             $decks = Deck::where('brand_id', $brandId)->get();
         }
 
