@@ -10,6 +10,17 @@
                 {{ $brand->name }}
             </a>
         @endforeach
+
+        <p>Don't see your brand?</p> 
+        <div x-data="{ open: false }">
+            <div class="text-emerald-500 mb-2" @click="open = !open">Add a brand</div>
+
+            <div x-show="open">
+                <div class="bg-slate-100 p-4">
+                    <livewire:add-a-brand-form/>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="mb-10">
