@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             BrandsSeeder::class,
             DecksSeeder::class,
-            DeckVariationsSeeder::class
+            DeckVariationsSeeder::class,
+            ArtistsSeeder::class,
         ]);
     }
 }
