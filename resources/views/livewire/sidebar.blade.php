@@ -2,14 +2,31 @@
     <section class="mb-10">
         <h2 class="font-bold">Brands</h2>
 
-        @foreach ($brands as $brand)
+        @foreach ($firstFewBrands as $brand)
             <a  
-                wire:click="select('{{ $brand->name }}')"
-                wire:model="selectedBrands"
+                wire:model="brand"
                 class="block border p-2 mb-2 hover:border-emerald-300" >
                 {{ $brand->name }}
             </a>
         @endforeach
+
+        <div x-data="{ open: false }">
+
+            <div x-show="open">
+                @foreach ($remainingBrands as $brand)
+                    <a  
+                        wire:model="brand"
+                        class="block border p-2 mb-2 hover:border-emerald-300" >
+                        {{ $brand->name }}
+                    </a>
+                @endforeach
+            </div>
+
+            <div 
+                x-text="open ? 'Show Less' : 'Show More'"
+                class="cursor-pointer text-emerald-500 mb-2" 
+                @click="open = !open"></div>
+        </div>
 
         <p>Don't see your brand?</p> 
         <div x-data="{ open: false }">
