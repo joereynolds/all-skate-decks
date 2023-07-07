@@ -15,14 +15,14 @@
             {{ $deck->description }}
         </p>
         <div>
-            Variations: 
+            Variations:
             @foreach ($deck->variations as $variation)
-                <button 
+                <button
                     wire:click="$set('imageUrl', '{{ $variation->image_url }}')"
                     class="inline-block border p-2"
                 >
                     {{ $variation->name }}
-                </button> 
+                </button>
             @endforeach
         </div>
     </div>

@@ -1,5 +1,5 @@
 <div class="flex">
     @foreach ($decks as $deck)
-        <livewire:deck :deck="$deck"/>
+        <x-deck :deck="$deck"/>
     @endforeach
 </div>

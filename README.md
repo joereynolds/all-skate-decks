@@ -14,7 +14,7 @@ Because I want to try and find my old boards and didn't see a website like this 
 ## Development
 
 Everything uses docker. Run `./run.sh` and populate an `.env` file with these
-DB credentials and you should be good to go:
+DB credentials and you should be good to go on `localhost:8080`:
 
 ```
 DB_CONNECTION=mysql
@@ -31,3 +31,11 @@ DB_PASSWORD=password
 - Livewire
 - Tailwind
 - AlpineJs
+
+### Troubleshootings
+
+#### How to compile chages
+
+```
+docker-compose run --rm node npm run dev
+```

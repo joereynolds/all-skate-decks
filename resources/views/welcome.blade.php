@@ -7,15 +7,13 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-        @livewireStyles
-        @livewireScripts
     </head>
     <body class="p-5">
-        <livewire:search/>
+        <x-search/>
 
         <main class="mt-5 flex">
-            <livewire:sidebar/>
-            <livewire:deck-listing/>
+            <x-sidebar/>
+            <x-deck-listing/>
         </main>
 
     </body>

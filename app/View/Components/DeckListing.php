@@ -1,19 +1,18 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\View\Components;
 
 use App\Models\Brand;
 use App\Models\Deck;
-use Illuminate\Http\Request;
-use Livewire\Component;
+use Illuminate\View\Component;
 
 class DeckListing extends Component
 {
     public $brands;
 
-    public function render(Request $request)
+    public function render()
     {
-        $brands = $request->query('brands');
+        $brands = request()->query('brands');
 
         if ($brands) {
             $brandId = Brand::where('name', $brands)->first()->id;
@@ -25,7 +24,7 @@ class DeckListing extends Component
         }
 
         return view(
-            'livewire.deck-listing',
+            'components.deck-listing',
             [
                 'decks' => $decks
             ]
