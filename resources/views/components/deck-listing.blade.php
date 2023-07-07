@@ -1,5 +1,10 @@
 <div class="deck-listing flex">
-    @foreach ($decks as $deck)
+    @forelse ($decks as $deck)
         <x-deck :deck="$deck"/>
-    @endforeach
+    @empty
+        <p>
+            No decks for the brand
+            <strong>{{ $context['brand'] }}</strong>
+        </p>
+    @endforelse
 </div>

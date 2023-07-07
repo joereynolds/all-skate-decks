@@ -23,8 +23,8 @@
             <div x-show="open">
                 @foreach ($remainingBrands as $brand)
                     <a
-                        hx-get="/brands"
-                        hx-swap="outerHTML"
+                        hx-get="/brands/{{ $brand->name }}"
+                        hx-swap=".deck-listing"
                         class="block border p-2 mb-2 hover:border-emerald-300" >
                         {{ $brand->name }}
                     </a>
@@ -34,7 +34,9 @@
             <div
                 x-text="open ? 'Show Less' : 'Show More'"
                 class="cursor-pointer text-emerald-500 mb-2"
-                @click="open = !open"></div>
+                @click="open = !open">
+
+            </div>
         </div>
 
         <p>Don't see your brand?</p>
