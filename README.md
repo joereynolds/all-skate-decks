@@ -28,7 +28,7 @@ DB_PASSWORD=password
 ### Technologies used
 
 - Laravel
-- Livewire
+- HTMX
 - Tailwind
 - AlpineJs
 
