@@ -6,7 +6,7 @@
         <title>All Skate Decks</title>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+        <script src="https://unpkg.com/htmx.org@1.9.2"></script>
     </head>
     <body class="p-5">
         <x-search/>

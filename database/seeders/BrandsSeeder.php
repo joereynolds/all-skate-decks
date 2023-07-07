@@ -21,8 +21,10 @@ class BrandsSeeder extends Seeder
                 ['name' => 'Flip'],
                 ['name' => 'Fracture'],
                 ['name' => 'Girl'],
+                ['name' => 'Heroin'],
                 ['name' => 'Krooked'],
                 ['name' => 'Santa Cruz'],
+                ['name' => 'Thank You'],
                 ['name' => 'Toy Machine'],
             ],
         );

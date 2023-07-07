@@ -2,8 +2,17 @@
     <section class="mb-10">
         <h2 class="font-bold">Brands</h2>
 
+        <a
+            hx-get="/brands"
+            hx-target=".deck-listing"
+            class="block border p-2 mb-2 hover:border-emerald-300" >
+            Show all
+        </a>
+
         @foreach ($firstFewBrands as $brand)
             <a
+                hx-get="/brands/{{ $brand->name }}"
+                hx-target=".deck-listing"
                 class="block border p-2 mb-2 hover:border-emerald-300" >
                 {{ $brand->name }}
             </a>
@@ -14,7 +23,8 @@
             <div x-show="open">
                 @foreach ($remainingBrands as $brand)
                     <a
-                        wire:model="brand"
+                        hx-get="/brands"
+                        hx-swap="outerHTML"
                         class="block border p-2 mb-2 hover:border-emerald-300" >
                         {{ $brand->name }}
                     </a>
