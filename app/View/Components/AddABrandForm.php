@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\View\Components;
 
 use App\Models\Brand;
 use Illuminate\Contracts\View\View;
-use Livewire\Component;
+use Illuminate\View\Component;
 
 class AddABrandForm extends Component
 {
@@ -27,6 +27,6 @@ class AddABrandForm extends Component
 
     public function render(): View
     {
-        return view('livewire.add-a-brand-form');
+        return view('components.add-a-brand-form');
     }
 }

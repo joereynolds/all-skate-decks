@@ -2,40 +2,27 @@
     <section class="mb-10">
         <h2 class="font-bold">Brands</h2>
 
-        <a
-            hx-get="/brands"
-            hx-target=".deck-listing"
-            class="block border p-2 mb-2 hover:border-emerald-300" >
-            Show all
-        </a>
+        <div class="brands">
+            <x-brand-button name="Show All" route=""/>
 
-        @foreach ($firstFewBrands as $brand)
-            <a
-                hx-get="/brands/{{ $brand->name }}"
-                hx-target=".deck-listing"
-                class="block border p-2 mb-2 hover:border-emerald-300" >
-                {{ $brand->name }}
-            </a>
-        @endforeach
+            @foreach ($firstFewBrands as $brand)
+                <x-brand-button :name="$brand->name" :route="$brand->name"/>
+            @endforeach
 
-        <div x-data="{ open: false }">
+            <div x-data="{ open: false }">
 
-            <div x-show="open">
-                @foreach ($remainingBrands as $brand)
-                    <a
-                        hx-get="/brands/{{ $brand->name }}"
-                        hx-swap=".deck-listing"
-                        class="block border p-2 mb-2 hover:border-emerald-300" >
-                        {{ $brand->name }}
-                    </a>
-                @endforeach
-            </div>
+                <div x-show="open">
+                    @foreach ($remainingBrands as $brand)
+                        <x-brand-button :name="$brand->name" :route="$brand->name"/>
+                    @endforeach
+                </div>
 
-            <div
-                x-text="open ? 'Show Less' : 'Show More'"
-                class="cursor-pointer text-emerald-500 mb-2"
-                @click="open = !open">
+                <div
+                    x-text="open ? 'Show Less' : 'Show More'"
+                    class="cursor-pointer text-emerald-500 mb-2"
+                    @click="open = !open">
 
+                </div>
             </div>
         </div>
 

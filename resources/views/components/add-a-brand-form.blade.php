@@ -1,8 +1,12 @@
 <div>
-    <form wire:submit.prevent="submit" method="POST">
+    <form
+        hx-post="/brands"
+    >
+        {{ csrf_field() }}
+
         <label class="block mb-2">
             <strong class="block">Brand</strong>
-            <input wire:model="brand" class="border p-2" name="brand"/>
+            <input class="border p-2" name="brand"/>
         </label>
 
         <input class="border p-2 bg-emerald-500 text-white cursor-pointer" type="submit" value="Add brand"/>

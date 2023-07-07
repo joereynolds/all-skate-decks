@@ -30,4 +30,11 @@ class BrandsController extends Controller
             ]
         );
     }
+
+    public function store(Request $request)
+    {
+        $submittedBrand = new Brand();
+        $submittedBrand->name = $request->post('brand');
+        $submittedBrand->save();
+    }
 }
