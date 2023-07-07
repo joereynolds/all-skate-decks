@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Deck;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class BrandsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index(string $brand = '')
+    public function index(string $brand = ''): View
     {
         if (!$brand) {
             $decks = Deck::all();
@@ -31,10 +29,18 @@ class BrandsController extends Controller
         );
     }
 
-    public function store(Request $request)
+    public function store(Request $request): View
     {
         $submittedBrand = new Brand();
         $submittedBrand->name = $request->post('brand');
         $submittedBrand->save();
+
+        return view(
+            'components.brand-button',
+            [
+                'route' => $request->post('brand'),
+                'name' => $request->post('brand'),
+            ]
+        );
     }
 }

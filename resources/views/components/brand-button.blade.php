@@ -1,4 +1,4 @@
-<div>
+<div class="brand">
     <a
         hx-get="/brands/{{ $route }}"
         hx-target=".deck-listing"
